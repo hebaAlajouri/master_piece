@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record a Message | HugsyWugsy</title>
+    <link rel="stylesheet" href="voice_recording.css">
+    <script src="voice_recording.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Make Your Teddy Bear Magical! ✨</h1>
+        <p>Record a sweet message or cute phrase, and add a personal touch to your cuddly friend!</p>
+
+        <!-- Progress Steps -->
+        <div class="progress-bar">
+            <span class="step active">1</span> Record
+            <span class="step">2</span> Preview
+            <span class="step">3</span> Save
+        </div>
+
+        <!-- Recording Section -->
+        <div class="recording-box">
+            <img src="record.jpeg" alt="Teddy Bear" class="teddy-image">
+            <button id="record-btn" class="record-btn">
+                🎤
+            </button>
+            <div class="waveform" id="waveform"></div>
+            <div class="controls">
+                <button id="stop-btn" class="stop-btn">⏹ Stop</button>
+                <button id="play-btn" class="play-btn">▶ Play</button>
+            </div>
+        </div>
+
+        <!-- Message Ideas -->
+        <div class="message-ideas">
+            <span class="message">"I love you!"</span>
+            <span class="message">"Hug me tight!"</span>
+            <span class="message">"Sweet dreams!"</span>
+        </div>
+
+        <button class="save-btn">💜 Save Recording</button>
+        <p class="footer-text">Your voice message will make your teddy bear extra special!</p>
+    </div>
+
+</body>
+</html>
