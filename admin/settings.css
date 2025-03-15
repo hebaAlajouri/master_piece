@@ -1,0 +1,173 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff5fa;
+    color: #5a5a5a;
+    margin: 0;
+    display: flex;
+    box-sizing: border-box;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #ff66b2;
+    padding: 20px;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    font-size: 22px;
+    text-align: center;
+    color: #fff;
+}
+
+.sidebar nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    transition: 0.3s;
+    border: 2px dashed transparent;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: white;
+    color: #ff66b2;
+    border-color: #ff66b2;
+}
+
+/* Main Content */
+.content {
+    margin-left: 270px;
+    padding: 30px;
+    width: 100%;
+}
+
+/* Title */
+.title h1 {
+    font-size: 28px;
+    color: #ff66b2;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Settings Section */
+.settings-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px dashed #ff66b2;
+}
+
+.card h3 {
+    font-size: 18px;
+    color: #ff66b2;
+    margin: 0;
+}
+
+.card form {
+    margin-top: 20px;
+}
+
+.card form label {
+    display: block;
+    font-size: 16px;
+    color: #5a5a5a;
+    margin-bottom: 5px;
+}
+
+.card form input,
+.card form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid #ff66b2;
+    margin-bottom: 15px;
+    background: #fff5fa;
+}
+
+.card form button {
+    background-color: #ff66b2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card form button:hover {
+    background-color: #ff3385;
+}
+
+/* Sidebar Active Link */
+.sidebar nav a.active {
+    background-color: white;
+    color: #ff66b2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .content {
+        margin-left: 210px;
+    }
+
+    .settings-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .title h1 {
+        font-size: 24px;
+    }
+}
+
+/* Buttons (Global) */
+button {
+    background-color: #ff66b2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #ff3385;
+}
