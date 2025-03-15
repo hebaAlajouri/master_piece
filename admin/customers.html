@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers - HugsyWugsy Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif;
+            text-decoration: none;
+        }
+
+        body {
+            display: flex;
+            background: #fdf1f9;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: linear-gradient(145deg, #ff77cc, #f28ab2);
+            padding: 20px;
+            color: white;
+            position: fixed;
+        }
+
+        .sidebar h2 {
+            font-family: 'Shadows Into Light', cursive;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .sidebar ul li a {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .sidebar ul li a i {
+            margin-right: 10px;
+        }
+
+        .sidebar ul li a:hover {
+            background: white;
+            color: #ff77cc;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 270px;
+            width: calc(100% - 270px);
+            padding: 20px;
+        }
+
+        .topbar {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .topbar h1 {
+            font-size: 1.8rem;
+            color: #f28ab2;
+            font-family: 'Shadows Into Light', cursive;
+        }
+
+        /* Customers Table */
+        .customers-container {
+            margin-top: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .customers-container h2 {
+            font-size: 1.6rem;
+            color: #ff77cc;
+            margin-bottom: 15px;
+        }
+
+        .customers-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .customers-table th, .customers-table td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .customers-table th {
+            background: #ff77cc;
+            color: white;
+            font-weight: bold;
+        }
+
+        .customers-table tr:hover {
+            background: #fce4ec;
+        }
+
+        .status {
+            padding: 5px 10px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .active {
+            background: #33cc66;
+            color: white;
+        }
+
+        .inactive {
+            background: #ff3333;
+            color: white;
+        }
+
+        .action-btn {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .view {
+            background: #ff77cc;
+            color: white;
+        }
+
+        .edit {
+            background: #3399ff;
+            color: white;
+        }
+
+        .delete {
+            background: #ff3333;
+            color: white;
+        }
+
+        .action-btn:hover {
+            opacity: 0.8;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>HugsyWugsy Admin</h2>
+        <ul>
+            <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="orders.html"><i class="fas fa-box"></i> Orders</a></li>
+            <li><a href="products.html"><i class="fas fa-gift"></i> Products</a></li>
+            <li><a href="customers.html"><i class="fas fa-users"></i> Customers</a></li>
+            <li><a href="analytics.html"><i class="fas fa-chart-line"></i> Analytics</a></li>
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            <li><a href="roles.html"><i class="fas fa-sign-out-alt"></i> Roles</a></li>
+            <li><a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="topbar">
+            <h1>Customers</h1>
+        </div>
+
+        <!-- Customers Table -->
+        <div class="customers-container">
+            <h2>Customer List</h2>
+            <table class="customers-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Orders</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sara Al-Hassan</td>
+                        <td>sara.hassan@example.com</td>
+                        <td>12</td>
+                        <td><span class="status active">Active</span></td>
+                        <td>
+                            <button class="action-btn view"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                            <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Layla Ahmed</td>
+                        <td>layla.ahmed@example.com</td>
+                        <td>5</td>
+                        <td><span class="status inactive">Inactive</span></td>
+                        <td>
+                            <button class="action-btn view"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                            <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
