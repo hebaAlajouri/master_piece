@@ -1,0 +1,171 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fdf1f9;
+}
+
+.container-fluid {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(145deg, #ff77cc, #f28ab2);
+    padding: 20px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure sidebar stays on top */
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+.sidebar ul li a:hover {
+    background: white;
+    color: #ff77cc;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px; /* Align content next to the sidebar */
+    padding: 30px 15px;
+    min-height: 100vh; /* Ensure the content stretches to full height */
+    width: calc(100% - 250px); /* Make the main content area take up the rest of the screen width */
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #ff77cc;
+    color: white;
+}
+
+.table td {
+    background-color: #ffffff;
+}
+
+.table td button {
+    margin-right: 5px;
+}
+
+/* Buttons */
+.btn-pink {
+    background-color: #ff77cc;
+    border-color: #ff77cc;
+    color: white;
+}
+
+.btn-pink:hover {
+    background-color: #d07ca0;
+    border-color: #d07ca0;
+}
+
+.btn-pink:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 105, 180, 0.5);
+}
+
+/* Modal */
+.modal-body {
+    padding: 20px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-select {
+    height: 150px;
+}
+
+/* Badge Styling */
+.badge {
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 12px;
+}
+
+.badge-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.badge-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.badge-warning {
+    background-color: #ffc107;
+    color: white;
+}
+
+.badge-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.text-center {
+    text-align: center;
+}
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;  /* Make it take the full viewport height */
+    background: linear-gradient(145deg, #ff77cc, #f28ab2); /* Sidebar gradient */
+    padding: 20px;
+    color: white;
+    position: fixed;  /* Fixed position on the left */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure sidebar stays on top of content */
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+}
