@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Gift Card | HugsyWugsy</title>
+    <link rel="stylesheet" href="gift_card.css">
+    <script src="gift_card.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="gift-card-container">
+        <h1 class="title">🎀 Create Your Magical Gift Card 🎀</h1>
+
+        <!-- Live Preview -->
+        <div class="preview-container">
+            <div class="gift-card-preview">
+                <img id="card-template" src="template1.jpg" alt="Gift Card Template">
+                <div class="preview-text">
+                    <h2 id="preview-recipient">For: [Recipient]</h2>
+                    <p id="preview-message">Your sweet message here...</p>
+                    <h3 id="preview-sender">From: [Your Name]</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customization Form -->
+        <div class="customization-form">
+            <label>🎨 Choose a Template:</label>
+            <div class="template-options">
+                <img src="template1.jpg" class="template-choice" onclick="changeTemplate('template1.jpg')">
+                <img src="template2.jpg" class="template-choice" onclick="changeTemplate('template2.jpg')">
+                <img src="template3.jpg" class="template-choice" onclick="changeTemplate('template3.jpg')">
+            </div>
+
+            <label>💌 Recipient's Name:</label>
+            <input type="text" id="recipient-name" placeholder="Enter name..." oninput="updatePreview()">
+
+            <label>💖 Message:</label>
+            <textarea id="gift-message" placeholder="Write a sweet message..." oninput="updatePreview()"></textarea>
+
+            <label>🎀 From:</label>
+            <input type="text" id="sender-name" placeholder="Your name..." oninput="updatePreview()">
+
+            <label>🖋 Font Style:</label>
+            <select id="font-style" onchange="changeFontStyle()">
+                <option value="Poppins">Poppins</option>
+                <option value="Dancing Script">Dancing Script</option>
+                <option value="Pacifico">Pacifico</option>
+            </select>
+
+            <label>🎁 Choose Gift Amount:</label>
+            <select id="gift-amount">
+                <option>$10</option>
+                <option>$25</option>
+                <option>$50</option>
+                <option>$100</option>
+            </select>
+
+            <label>📤 Delivery Method:</label>
+            <select id="delivery-method">
+                <option>Email</option>
+                <option>Print (Download as PDF)</option>
+            </select>
+
+            <button class="generate-btn" onclick="generateGiftCard()">✨ Generate Gift Card ✨</button>
+        </div>
+    </div>
+
+</body>
+</html>
