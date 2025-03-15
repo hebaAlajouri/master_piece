@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics | HugsyWugsy Admin</title>
+    <link rel="stylesheet" href="analytics.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>HugsyWugsy Admin</h2>
+        <ul>
+            <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="orders.html"><i class="fas fa-box"></i> Orders</a></li>
+            <li><a href="products.html"><i class="fas fa-gift"></i> Products</a></li>
+            <li><a href="customers.html"><i class="fas fa-users"></i> Customers</a></li>
+            <li><a href="analytics.html"><i class="fas fa-chart-line"></i> Analytics</a></li>
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            <li><a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            <li><a href="roles.html"><i class="fas fa-sign-out-alt"></i> Roles</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main class="content">
+        <h1 class="title">📊 Analytics Overview</h1>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Total Sales</h3>
+                <p>$12,450</p>
+            </div>
+            <div class="card">
+                <h3>Orders</h3>
+                <p>342</p>
+            </div>
+            <div class="card">
+                <h3>Customers</h3>
+                <p>189</p>
+            </div>
+        </div>
+
+        <!-- Chart Section -->
+        <div class="chart-container">
+            <canvas id="salesChart"></canvas>
+        </div>
+
+    </main>
+
+    <script>
+        // Chart.js for the sketch-style chart
+        const ctx = document.getElementById('salesChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Sales ($)',
+                    data: [2000, 2500, 1800, 3200, 4100, 3900],
+                    borderColor: '#ff66b2',
+                    backgroundColor: 'rgba(255, 102, 178, 0.2)',
+                    borderWidth: 3,
+                    pointBackgroundColor: '#ff66b2',
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        labels: {
+                            font: { family: 'Poppins', size: 14 },
+                            color: '#ff66b2'
+                        }
+                    }
+                },
+                scales: {
+                    x: { ticks: { font: { family: 'Poppins' }, color: '#ff66b2' } },
+                    y: { ticks: { font: { family: 'Poppins' }, color: '#ff66b2' } }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
