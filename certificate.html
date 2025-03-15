@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bear Adoption Certificate</title>
+    <link rel="stylesheet" href="certificate.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Form Section -->
+        <div class="form-container">
+            <h1>🐻 Your Bear Adoption Certificate 🎉</h1>
+            <p>Fill in the details below to generate your certificate!</p>
+
+            <!-- Form Section -->
+            <label for="owner-name-input">Your Name:</label>
+            <input type="text" id="owner-name-input" placeholder="Enter your name" value="Sarah Johnson">
+
+            <label for="bear-name-input">Teddy Bear's Name:</label>
+            <input type="text" id="bear-name-input" placeholder="Enter teddy's name" value="Mr. Snuggles">
+
+            <label for="adoption-date-input">Adoption Date:</label>
+            <input type="date" id="adoption-date-input">
+
+            <button onclick="updateCertificate()">Update Certificate</button>
+        </div>
+
+        <!-- Certificate Section -->
+        <div class="certificate-container">
+            <div id="certificate" class="certificate">
+                <img src="record.jpeg" alt="Bear Logo" class="bear-logo">
+                <h2>Certificate of Bear Ownership</h2>
+                <p>🌟 HugsyWugsy's Official Adoption Papers 🌟</p>
+                <div class="content">
+                    <p>This certifies that</p>
+                    <p id="owner-name"><strong>Sarah Johnson</strong></p>
+                    <p>has officially adopted</p>
+                    <p id="bear-name"><strong>Mr. Snuggles</strong></p>
+                    <p id="adoption-date">on <strong>March 14, 2025</strong></p>
+                    <p>With love,</p>
+                    <p><em>The HugsyWugsy Team 💖</em></p>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button id="download-btn"><i class="fas fa-download"></i> Download</button>
+                <button id="share-btn"><i class="fas fa-share-alt"></i> Share</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="certificate.js"></script>
+</body>
+</html>
